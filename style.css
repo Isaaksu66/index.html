@@ -15,7 +15,7 @@ body {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #000;
   color: #fff;
@@ -28,6 +28,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-right: auto;
 }
 
 .nav-links {
@@ -39,11 +40,21 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #aaa;
+}
+
+/* Menu toggle (burger menu) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* HERO SECTION */
@@ -130,8 +141,12 @@ footer {
   margin-top: 2rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE (Mobile) */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -141,49 +156,10 @@ footer {
     right: 0;
     width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .nav-links.active {
     display: flex;
   }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-}
-
-/* Menu toggle hidden by default */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: white;
-}
-.navbar {
-  display: flex;
-  justify-content: center; /* centre tout le menu */
-  align-items: center;
-  background-color: #000;
-  padding: 10px 20px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px; /* espace entre les liens */
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ccc; /* couleur au survol */
 }
