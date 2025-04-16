@@ -115,13 +115,7 @@ footer {
     font-size: 2rem;
     cursor: pointer;
   }
-}
 
-/* Menu toggle (burger menu) */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
 }
 
 /* Style pour les images dans la galerie */
