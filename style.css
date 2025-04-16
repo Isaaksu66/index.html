@@ -7,37 +7,31 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   line-height: 1.6;
+  font-size: 16px;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
   background-color: #000;
-  color: #fff;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  color: white;
+  padding: 1rem;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-right: auto;
 }
 
-.nav-links {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.nav-links a {
+nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -45,53 +39,24 @@ body {
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #aaa;
+nav a:hover {
+  color: #ccc;
 }
 
-/* Menu toggle (burger menu) */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* HERO SECTION */
-.hero {
-  padding: 4rem 2rem;
+/* Section (Accueil, Coiffures, etc.) */
+.section {
+  padding: 3rem 1rem;
   text-align: center;
 }
 
-.hero h1 {
+h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* DESCRIPTION */
-.description {
-  padding: 2rem;
-  text-align: center;
-}
-
-.description h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* GALLERY */
-.gallery {
-  padding: 2rem;
-  text-align: center;
-}
-
-.gallery h1 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .grid {
@@ -103,63 +68,95 @@ body {
 .grid img {
   width: 100%;
   height: auto;
-  border: 2px solid #000;
   border-radius: 8px;
-  transition: transform 0.3s;
+  border: 2px solid #000;
+  transition: transform 0.3s ease;
 }
 
 .grid img:hover {
   transform: scale(1.05);
 }
 
-/* CONTACT */
-.contact-info {
-  padding: 2rem;
-  text-align: center;
-}
-
-.contact-info h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact-info p {
-  margin-bottom: 0.5rem;
-}
-
-.map {
-  margin-top: 2rem;
-  max-width: 100%;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
   background-color: #000;
   color: white;
+  padding: 1rem;
   margin-top: 2rem;
 }
 
-/* RESPONSIVE (Mobile) */
+/* Responsive design (Mobile First) */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 20px;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
   .menu-toggle {
     display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+
+/* Menu toggle (burger menu) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Style pour les images dans la galerie */
+.grid img {
+  border: 2px solid #000;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Style pour la map */
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* Responsive (pour améliorer l'expérience mobile) */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #000;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+  .grid {
+    grid-template-columns: 1fr;
   }
 
-  .nav-links.active {
-    display: flex;
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }
