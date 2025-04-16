@@ -160,3 +160,30 @@ footer {
   font-size: 1.8rem;
   color: white;
 }
+.navbar {
+  display: flex;
+  justify-content: center; /* centre tout le menu */
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* espace entre les liens */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ccc; /* couleur au survol */
+}
